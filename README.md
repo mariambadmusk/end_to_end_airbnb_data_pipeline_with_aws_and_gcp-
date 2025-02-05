@@ -44,7 +44,7 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
         - Find and enable the **Geocoding API**.
 
 
-            ![Alt Text](images/geocoding-api.png)
+            ![Alt Text](images/geocoding_api.png)
 
 
         - Copy the API key and store it securely.
