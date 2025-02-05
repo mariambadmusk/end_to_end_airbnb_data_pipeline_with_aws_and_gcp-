@@ -22,13 +22,13 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
         - Navigate to [IAM & Admin - Service Accounts](https://console.cloud.google.com/iam-admin/serviceaccounts).
 
 
-            <img src="images/service-account-gcp.png" alt="description" width="400" height="400">
-        
+            ![Alt Text](images/service_account_gcp.png)
+
 
          - Create a new service account (you can use any name); **under Grant this service account access to project - choose Cloud Translation Service Agent**
 
 
-              <img src="images/permissions.png" alt="description" width="400" height="400">
+                ![Alt Text](images/permissions.png) 
 
 
         - After creating the service account:
@@ -36,7 +36,7 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
         - Go to the **Keys** tab, add a new key, and download the JSON key file. **Keep this file secure**.
 
 
-            <img src="images/keys.png" alt="description" width="400" height="400">
+            ![Alt Text](images/keys.png)
     
 
     4. Enable Geocoding API
@@ -44,7 +44,7 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
         - Find and enable the **Geocoding API**.
 
 
-            <img src="images/geocoding-api.png.png" alt="description" width="400" height="400">
+            ![Alt Text](images/geocoding-api.png)
 
 
         - Copy the API key and store it securely.
@@ -75,25 +75,25 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
     - Launch Query Editor
 
     - Under the Editor tab, Choose AWSGLue Crawler
-
-        <img src="images/aws_crawler_athena.png" alt="description" width="400" height="400">
+  
+        ![Alt Text](images/aws_crawler_athena.png)
 
     - Under Settings tab, add S3 URI bucket already created in Step 4 under AWS S3 to store query results
 
-        <img src="images/athena_settings.png" alt="description" width="400" height="400">
+         ![Alt Text](images/athena_settings.png)
 
     - Configure the Crawler, add name
 
-        <img src="images/create-crawler.png" alt="description" width="400" height="400">
+        ![Alt Text](images/create_crawler.png)
 
     - For the IAM role, choose the role created in Step 3 or initially ceated for AWS glue job
 
-        <img src="images/aws_glue_role.png" alt="description" width="400" height="400">
+        ![Alt Text](images/aws_glue_role.png)
     
     - For data source
         - There was an issue with the crawler, each file was stored in its respective folder:
 
-            <img src="images/folder_structure.png" alt="description" width="400" height="400">
+            ![Alt Text](images/folder_structure.png)
 
           ├── airbnb-listings-bucket               
                 ├── raw-data                # a folder ; contains the csv list of the raw data
@@ -114,13 +114,13 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
 
     - For the database, add a name related to the project
 
-        <img src="images/create_database.png" alt="description" width="400" height="400">
+        ![Alt Text](images/create_database.png)
     
     - Go to Athena and refresh to see the newly added database and tables
 
     - Duplicate the crawler for each file edit to  choose a differnte data source in step 2; but choose the same database.
     
-        <img src="images/duplicate.png" alt="description" width="400" height="400">
+        ![Alt Text](images/duplicate.png)
 
     - Run the crawlers
     - Go to Athena and refresh the database; you should see all your tables
@@ -142,7 +142,7 @@ This project uses AWS IAM and VPC to securely allow AWS Glue to access the Googl
     - Delete role(s)
     - Empty then delete buckets
     - If Glue job saved, delete them too
-    - 
+      
     
 
 ## Contributions
